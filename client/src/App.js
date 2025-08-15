@@ -14,7 +14,7 @@ function App() {
         setResults([]);
 
         try {
-            const res = await fetch(`http://localhost:5000/api/search?q=${query}`);
+            const res = await fetch(`https://npm-package-search-87kd.onrender.com/api/search?q=${query}`);
             const data = await res.json();
             setResults(data.objects || []);
         } catch {
